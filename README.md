@@ -5,7 +5,7 @@ This project is a simple AI assistant application that provides personal informa
 ## Project Structure
 
 ```
-my-python-app
+
 ├── tools
 │   ├── personal_info.py
 │   ├── date_time.py
