@@ -1,58 +1,69 @@
-# React AI Agent with LangGraph
+# My Python App
 
-A simple implementation of a React AI agent using LangGraph and FastAPI. This agent demonstrates how to create a thinking process with reflection using LangGraph's workflow capabilities.
-
-## Features
-
-- React-style agent with thought generation and reflection
-- FastAPI backend with RESTful endpoints
-- Easy to extend with additional reasoning steps
-- Built with LangGraph and LangChain
-
-## Prerequisites
-
-- Python 3.8+
-- OpenAI API key
-
-## Setup
-
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Create a `.env` file in the project root and add your API key:
-   ```
-   GROQ_API_KEY=your-api-key-here
-   ```
-
-## Running the Application
-
-Start the FastAPI server:
-```bash
-uvicorn app:app --reload
-```
-
-The API will be available at `http://localhost:8000`
-
-## API Endpoints
-
-- `POST /chat` - Send a message to the AI agent
-  - Request body: `{"message": "Your message here"}`
-  - Response: `{"response": "AI's response"}`
-
-- `GET /health` - Health check endpoint
-  - Response: `{"status": "healthy"}`
-
-## Example Usage
-
-```bash
-curl -X POST http://localhost:8000/chat \
-  -H "Content-Type: application/json" \
-  -d '{"message": "What is the capital of France?"}'
-```
+This project is a simple AI assistant application that provides personal information, current date and time, and weather information for specified cities. The application is structured into separate modules for better organization and maintainability.
 
 ## Project Structure
 
-- `app.py` - Main application file with FastAPI setup and agent logic
-- `requirements.txt` - Python dependencies
+```
+my-python-app
+├── tools
+│   ├── personal_info.py
+│   ├── date_time.py
+│   └── get_weather.py
+├── prompt
+│   └── restrictive_prompt.txt
+├── llm
+│   └── model.py
+├── main.py
+└── README.md
+```
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```
+   cd my-python-app
+   ```
+3. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+1. Run the application:
+   ```
+   python main.py
+   ```
+2. Interact with the AI assistant by typing your queries. You can ask for:
+   - Personal information about the assistant
+   - The current date and time
+   - Weather information for any city
+
+3. Type 'quit' to exit the application.
+
+## Tools
+
+- **personal_info.py**: Contains a function to return personal information about the AI assistant.
+- **date_time.py**: Contains a function to return the current date and time.
+- **get_weather.py**: Contains a function to return weather information for a specified city.
+
+## Prompts
+
+- **restrictive_prompt.txt**: Contains the prompt that defines the allowed behaviors and responses for the AI assistant.
+
+## Model
+
+- **model.py**: Contains the implementation and configuration of the AI model used for generating responses.
+
+## Contributing
+
+Feel free to submit issues or pull requests for improvements or bug fixes. 
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
