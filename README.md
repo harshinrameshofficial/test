@@ -7,12 +7,14 @@ This project is a simple AI assistant application that provides personal informa
 ```
 
 ├── tools
+|   ├── __init__.py
 │   ├── personal_info.py
 │   ├── date_time.py
 │   └── get_weather.py
 ├── prompt
 │   └── restrictive_prompt.txt
 ├── llm
+|   ├── agent.py
 │   └── model.py
 ├── main.py
 └── README.md
